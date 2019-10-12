@@ -8,7 +8,7 @@ public class CallingMethodApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CallingMethodApplication.class, args);
-		System.out.print("Preethy dear!!!");
+		System.out.print("Preethy dear,you are a rockstar!!!");
 	}
 
 }
