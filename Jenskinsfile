@@ -1,0 +1,21 @@
+pipeline {
+	agent any
+	
+	stages{
+		stage('Build'){
+			steps{
+				sh 'ant -f build.xml -v'
+			}
+		}
+		stage('Test'){
+			steps{
+				sh 'echo "Hello Guyzz"'
+			}
+		}
+	}
+	post{
+		success{
+			archiveArtifacts artifacts: 'dist/*.jar', fingerprint: true
+		}
+	}
+}
